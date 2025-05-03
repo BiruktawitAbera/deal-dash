@@ -92,32 +92,32 @@ export default function AuctionDetail() {
           </div>
 
           {/* Bid Info */}
-          <div className="flex-[1] bg-gray-100 border rounded p-4 shadow-sm w-full">
+          <div className="flex-[1] bg-black border rounded p-4 shadow-sm w-full text-white">
             <h4 className="font-bold text-md mb-2">Current Bid</h4>
-            <div className="text-xl font-semibold text-green-600">$40.09</div>
-            <p className="text-sm text-gray-600 mt-1 mb-3">50% off</p>
+            <div className="text-xl font-semibold text-green-400">$40.09</div>
+            <p className="text-sm text-gray-300 mt-1 mb-3">50% off</p>
 
             {/* Highest Bidder */}
-            <div className="flex items-center gap-2 bg-white p-2 rounded border mb-4">
+            <div className="flex items-center gap-2 bg-gray-800 p-2 rounded border border-gray-600 mb-4">
               <Avatar sx={{ bgcolor: "#2196f3" }}>
                 <PersonIcon fontSize="small" />
               </Avatar>
               <div>
-                <div className="font-semibold text-gray-800">{highestBidder.name}</div>
-                <div className="text-xs text-gray-500">{highestBidder.date}</div>
+                <div className="font-semibold text-white">{highestBidder.name}</div>
+                <div className="text-xs text-gray-300">{highestBidder.date}</div>
               </div>
             </div>
 
             {/* Bid History */}
-            <div className="bg-white border rounded p-3 mb-4 max-h-72 overflow-y-auto">
+            <div className="bg-gray-900 border border-gray-700 rounded p-3 mb-4 max-h-72 overflow-y-auto">
               {bidHistory.map((bid, i) => (
-                <div className="flex justify-between text-sm py-1 border-b" key={i}>
-                  <span className="text-gray-700">{bid.price}</span>
-                  <span className="text-gray-600 flex items-center gap-1">
-                    <GavelIcon fontSize="small" className="text-blue-500" />
+                <div className="flex justify-between text-sm py-1 border-b border-gray-700" key={i}>
+                  <span className="text-white">{bid.price}</span>
+                  <span className="text-gray-300 flex items-center gap-1">
+                    <GavelIcon fontSize="small" className="text-blue-400" />
                     {bid.user}
                   </span>
-                  <span className="text-gray-500 flex items-center gap-1">
+                  <span className="text-gray-400 flex items-center gap-1">
                     <AccessTimeIcon fontSize="small" />
                     {bid.time}
                   </span>
@@ -126,12 +126,12 @@ export default function AuctionDetail() {
             </div>
 
             {/* Timer */}
-            <div className="text-center mt-4 text-red-600 text-lg font-bold">
-              00:00:04 <span className="text-sm text-gray-600">TIME LEFT</span>
+            <div className="text-center mt-4 text-red-400 text-lg font-bold">
+              00:00:04 <span className="text-sm text-gray-300">TIME LEFT</span>
             </div>
 
             {/* CTA */}
-            <button className="mt-4 bg-yellow-400 hover:bg-yellow-300 w-full py-2 rounded font-semibold">
+            <button className="mt-4 bg-yellow-400 hover:bg-yellow-300 w-full py-2 rounded font-semibold text-black">
               Create Account
             </button>
           </div>
