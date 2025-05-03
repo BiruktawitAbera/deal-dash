@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import TopNav from "./components/TopNav";
 import AuctionGrid from "./components/AuctionGrid";
-import AuctionDetail from "./pages/AuctionDetail"; // 👈 Import your detail page
+import AuctionDetail from "./pages/AuctionDetail"; 
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <TopNav />
       <Routes>
         <Route path="/" element={<AuctionGrid />} />
-        <Route path="/auction/:id" element={<AuctionDetail />} /> {/* 👈 Detail route */}
+        <Route path="/auction/:id" element={<AuctionDetail />} /> 
       </Routes>
     </Router>
   );
